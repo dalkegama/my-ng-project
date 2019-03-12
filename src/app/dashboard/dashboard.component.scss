@@ -1,0 +1,28 @@
+.dashboard-container {
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    margin: 0 auto;
+    grid-template-columns: repeat(6, 15%);
+    grid-gap: 20px;
+    li {
+      background: rgb(238, 238, 238);
+      padding: 2em;
+      border-radius: 4px;
+      p {
+        font-weight: bold;
+        text-align: center;
+      }
+
+      img {
+        border-radius: 50%;
+        width: 100%;
+      }
+    }
+  }
+}
+.organization-profile {
+  background: black;
+}

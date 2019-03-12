@@ -1,0 +1,30 @@
+<div class="dashboard-container">
+  <ul *ngIf="userList">
+    <li *ngFor="let user of (userList | async)">
+      <div
+        [ngClass]="change(user.type)"
+        class="user-profile"
+        (click)="clickUser(user.avatar_url)"
+      >
+        <img
+          class="user-profile__profile"
+          [src]="user.avatar_url"
+          alt="{{ user.id }}"
+        />
+        <p class="user-profile__login">{{ user.login }}</p>
+
+        <!-- <img
+          class="user-profile__profile"
+          src="{{ user.avatar_url }}"
+          alt="{{ user.id }}"
+        /> -->
+      </div>
+    </li>
+  </ul>
+</div>
+<ul *ngIf="users">
+  <li *ngFor="let user of users.data">
+    <img [src]="user.avatar" />
+    <p>{{ user.first_name }} {{ user.last_name }}</p>
+  </li>
+</ul>

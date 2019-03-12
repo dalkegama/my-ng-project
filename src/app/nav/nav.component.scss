@@ -1,0 +1,39 @@
+@import '../../assets/variables.scss';
+
+header {
+  background: $solar-orange;
+
+  .logo {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    span {
+      margin-left: 0.5em;
+    }
+  }
+
+  nav {
+    display: flex;
+    justify-self: right;
+    align-items: center;
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+
+      li {
+        float: left;
+
+        a {
+          padding: 1.5em;
+          text-transform: uppercase;
+          font-size: 0.8em;
+
+          &:hover {
+            background: darken($solar-orange, 10);
+          }
+        }
+      }
+    }
+  }
+}
